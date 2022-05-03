@@ -21,7 +21,7 @@ def main():
             binary_number = input("")
             binary_length = int(len(binary_number))
             result = 0
-            wrong = ["1", "0"]
+            # wrong = ["1", "0"]
             # print(f"The length of the number is {binary_length}.")
             # if "1" not in str(binary_number):
             #     print(colorama.Fore.LIGHTRED_EX + "\n You entered a wrong value!")
