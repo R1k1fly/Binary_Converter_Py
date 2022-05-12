@@ -6,7 +6,6 @@ def main():
       |                                          |
       | 1 - covert binary number into decimal;   |
       | 2 - convert decimal number into binary.  |
-      | 3 - exit                                 |
       |__________________________________________|
         """)
         print("Choose which feature you want to use: ")
