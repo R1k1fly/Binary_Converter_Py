@@ -20,14 +20,6 @@ def main():
             binary_number = input("Enter the binary number: ")
             binary_length = int(len(binary_number))
             result = 0
-            # wrong = ["1", "0"]
-            # print(f"The length of the number is {binary_length}.")
-            # if "1" not in str(binary_number):
-            #     print(colorama.Fore.LIGHTRED_EX + "\n You entered a wrong value!")
-            #     continue
-            # elif "0" not in str(binary_number):
-            #     print(colorama.Fore.LIGHTRED_EX + "\n You entered a wrong value!")
-            #     continue
             print("Now we multiply our result by 2 and add the number of the lap.")
             for i in range(int(binary_length)):
                 print("Lap:" + str(i))
@@ -76,13 +68,14 @@ def main():
                 max_number = binary_number_2
                 min_number = binary_number_1
 
-            print("Max:" + max_number)
-            print("Min:" + min_number)
             dif = max_length - min_length
             for i in range(dif):
                 min_number = "0" + str(min_number)
             print("Max:" + max_number)
             print("Min:" + min_number)
+            for i in tqdm(range(int(100)), ncols=100):
+                time.sleep(0.009)
+                pass
             for i in range(int(max_length) - 1, -1, -1):
                 a = int(max_number[i]) + int(min_number[i]) + int(addition)
                 # print(f"Binary_1: {binary_number_1[i]}")
@@ -93,22 +86,22 @@ def main():
                     if int(a) != 0:
                         addition = 1
                     current_number = "0"
-                    print(result)
                     result = current_number + result
                     print(f"Addition: {addition}")
                     print(f"Current number: {current_number}")
                     print(f"Result number[{i}]: {result}")
+                    time.sleep(0.5)
 
                 elif int(a) % 2 != 0:
                     addition = 0
                     if int(a) != 1:
                         addition = 1
                     current_number = "1"
-                    print(result)
                     result = current_number + result
                     print(f"Addition: {addition}")
                     print(f"Current number: {current_number}")
                     print(f"Result number[{i}]: {result}")
+                    time.sleep(0.5)
             if addition == 1:
                 print("Addition: 1")
                 result = "1" + result

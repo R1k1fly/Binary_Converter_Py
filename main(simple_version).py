@@ -61,6 +61,7 @@ def main():
                         addition = 1
                     current_number = "1"
                     result = current_number + result
+
             if addition == 1:
                 result = "1" + result
                 print(f"\n Your result is {result}.")
