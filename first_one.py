@@ -1,4 +1,3 @@
-
 def first_one():
     while True:
         global position
