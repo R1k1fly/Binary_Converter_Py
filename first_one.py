@@ -7,7 +7,7 @@ def first_one():
             if number[i] == "1":
                 position = i
 
-        print("First position: " + str(position))
+        print("First position of number 1 is: " + str(position))
 
 if __name__ == "__main__":
     first_one()
