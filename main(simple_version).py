@@ -42,8 +42,7 @@ def binary_addition(binary_number_1, binary_number_2):
 
     for i in range(int(max_length) - 1, -1, -1):
         a = int(max_number[i]) + int(min_number[i]) + int(addition)
-        # print(f"Binary_1: {binary_number_1[i]}")
-        # print(f"Binary_2: {binary_number_2[i]}") 10010
+
         addition = 0
         if int(a) % 2 == 0:
             addition = 0
