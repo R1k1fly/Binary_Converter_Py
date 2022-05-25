@@ -1,4 +1,3 @@
-
 def binary_decimal(binary_number):
     binary_length = int(len(binary_number))
     result = 0
@@ -91,6 +90,8 @@ def binary_multiplication(binary_number_1, binary_number_2):
     global min_number_m
     global max_number_m
     global a
+    global counter
+    counter = 0
     if max_length_m == binary_length_1:
         max_number_m = binary_number_1
         min_number_m = binary_number_2
@@ -99,51 +100,39 @@ def binary_multiplication(binary_number_1, binary_number_2):
         max_number_m = binary_number_2
         min_number_m = binary_number_1
 
-    for i in range(min_length_m):
+    dif = max_length_m - min_length_m
+    #
+    # for i in range(dif):
+    #     min_number_m = "0" + str(min_number_m)
+    # binary_number_1 = binary_number_1[::-1]
+    # binary_number_2 = binary_number_2[::-1]
+    # max_number_m = max_number_m[::-1]
+    # min_number_m = min_number_m[::-1]
+    # min_length_m = str(min_length_m)
+    for i in range(min_length_m -1, -1, -1):
+        if dif == 0:
+            a = int(min_number_m[i]) * int(max_number_m)
+            # print(f"a = {int(min_number_m[i])} * {int(max_number_m)}")
+        elif dif != 0:
+            a = int(binary_number_2[i]) * int(binary_number_1)
+            # print(f"a = {int(binary_number_2[i])} * {int(binary_number_1)}")
 
-        a = int(min_number_m[i]) * int(max_number_m)
-        for x in range(i):
-            if a == 0:
+        if a == 0:
+            if i != 0:
                 for x in range(min_length_m):
                     a = str(a) + "0"
-            a = str(a) + "0"
+                for y in range(counter):
+                    a = str(a) + "0"
+                counter = counter + 1
 
+
+        elif a != 0:
+            for x in range(counter):
+                a = str(a) + "0"
+            counter = counter + 1
+
+        # print(f"a: {a}")
+        # print(f"Adding {result} and {str(a)}")
         result = binary_addition(result, str(a))
     return result
-
-
-# Enter the first binary number: 11101
-# Enter the second binary number: 1001
-# Min number: 1001.
-# Max number: 11101.
-# 1 * 11101 = 11101
-# a: 11101
-# Current:11101
-# 0 * 11101 = 0
-# a: 000000
-# Current:011101
-# 1 * 000000 = 0
-# a: 0000000
-# Current:0011101
-# 1 * 0000000 = 0
-# a: 00000000
-# Current:00011101
-# Final: 00011101
-#
-# Enter the first binary number: 11101
-# Enter the second binary number: 1001
-# Min number: 1001.
-# Max number: 11101.
-# 1 * 11101 = 11101
-# a: 11101
-# Current:11101
-# 0 * 11101 = 0
-# a: 000000
-# Current:011101
-# 0 * 11101 = 0
-# a: 0000000
-# Current:0011101
-# 1 * 11101 = 11101
-# a: 11101000
-# Current:100000101
-# Final: 100000101
+    # print(result)

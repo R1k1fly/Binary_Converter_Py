@@ -48,6 +48,7 @@ def main():
         elif your_choice == "6":
             binary_number_1 = input("Enter the first binary number: ")
             binary_number_2 = input("Enter the second binary number: ")
+            # binary.binary_multiplication(binary_number_1, binary_number_2)
             print(
                 colorama.Fore.LIGHTGREEN_EX + colorama.Style.BRIGHT + f"""\nYour result is {binary.binary_multiplication(binary_number_1, binary_number_2)}.""" + colorama.Style.RESET_ALL)
         elif your_choice == "7":
