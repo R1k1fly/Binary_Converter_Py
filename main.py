@@ -2,7 +2,6 @@ import colorama
 import binary
 
 
-
 def main():
     while True:
         print(colorama.Fore.LIGHTCYAN_EX + """
@@ -24,21 +23,25 @@ def main():
 
         if your_choice == "1":
             binary_number = input("Enter the binary number: ")
-            print( colorama.Fore.LIGHTGREEN_EX + colorama.Style.BRIGHT + f"\nYour result is {binary.binary_decimal(binary_number)}." + colorama.Style.RESET_ALL)
+            print(
+                colorama.Fore.LIGHTGREEN_EX + colorama.Style.BRIGHT + f"\nYour result is {binary.binary_decimal(binary_number)}." + colorama.Style.RESET_ALL)
 
         elif your_choice == "2":
             decimal_number = input("Enter the decimal number: ")
-            print(colorama.Fore.LIGHTGREEN_EX + colorama.Style.BRIGHT + f"\nYour result is {binary.decimal_binary(decimal_number)}." + colorama.Style.RESET_ALL)
+            print(
+                colorama.Fore.LIGHTGREEN_EX + colorama.Style.BRIGHT + f"\nYour result is {binary.decimal_binary(decimal_number)}." + colorama.Style.RESET_ALL)
 
         elif your_choice == "3":
             binary_number_1 = input("Enter the first binary number: ")
             binary_number_2 = input("Enter the second binary number: ")
-            print(colorama.Fore.LIGHTGREEN_EX + colorama.Style.BRIGHT + f"\nYour result is {binary.binary_addition(binary_number_1, binary_number_2)}." + colorama.Style.RESET_ALL)
+            print(
+                colorama.Fore.LIGHTGREEN_EX + colorama.Style.BRIGHT + f"\nYour result is {binary.binary_addition(binary_number_1, binary_number_2)}." + colorama.Style.RESET_ALL)
 
         elif your_choice == "4":
             binary_number_1 = input("Enter the first binary number: ")
             binary_number_2 = input("Enter the second binary number: ")
-            print(colorama.Fore.LIGHTGREEN_EX + colorama.Style.BRIGHT + f"\nYour result is {binary.binary_subtract(binary_number_1, binary_number_2)}." + colorama.Style.RESET_ALL)
+            print(
+                colorama.Fore.LIGHTGREEN_EX + colorama.Style.BRIGHT + f"\nYour result is {binary.binary_subtract(binary_number_1, binary_number_2)}." + colorama.Style.RESET_ALL)
 
         elif your_choice == "5":
             binary_number = input("Enter the binary number: ")

@@ -101,15 +101,8 @@ def binary_multiplication(binary_number_1, binary_number_2):
         min_number_m = binary_number_1
 
     dif = max_length_m - min_length_m
-    #
-    # for i in range(dif):
-    #     min_number_m = "0" + str(min_number_m)
-    # binary_number_1 = binary_number_1[::-1]
-    # binary_number_2 = binary_number_2[::-1]
-    # max_number_m = max_number_m[::-1]
-    # min_number_m = min_number_m[::-1]
-    # min_length_m = str(min_length_m)
-    for i in range(min_length_m -1, -1, -1):
+
+    for i in range(min_length_m - 1, -1, -1):
         if dif == 0:
             a = int(min_number_m[i]) * int(max_number_m)
             # print(f"a = {int(min_number_m[i])} * {int(max_number_m)}")
@@ -124,7 +117,6 @@ def binary_multiplication(binary_number_1, binary_number_2):
                 for y in range(counter):
                     a = str(a) + "0"
                 counter = counter + 1
-
 
         elif a != 0:
             for x in range(counter):
